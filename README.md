@@ -1,7 +1,3 @@
-# Warning: Generated Code
-
-This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
-
 # chat-ui
 
 This Chat is fully customizable.
@@ -18,9 +14,12 @@ npm install @chat-ui/vue3
 ```
 <script setup>
     import { Chat } from "@chat-ui/vue3";
+    function handleMessage(message){
+        console.log(message)
+    }
 </script>
 <template>
-    <Chat />
+    <Chat :chat="[]" :onSend="handleMessage" />
 </template>
 ```
 

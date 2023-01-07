@@ -13,9 +13,12 @@ This Chat is fully customizable.
 ```
 <script setup>
     import { Chat } from "@chat-ui/vue3";
+    function handleMessage(message){
+        console.log(message)
+    }
 </script>
 <template>
-    <Chat />
+    <Chat :chat="[]" :onSend="handleMessage" />
 </template>
 ```
 
