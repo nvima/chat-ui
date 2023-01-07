@@ -1,0 +1,19 @@
+{
+  "name": "chatbot-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@builder.io/mitosis": "0.0.83",
+    "@builder.io/mitosis-cli": "0.0.41"
+  },
+  "devDependencies": {
+    "@builder.io/eslint-plugin-mitosis": "0.0.12",
+    "prettier": "^2.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
