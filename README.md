@@ -8,6 +8,12 @@ Size of Package: 16.79 KiB / gzip: 4.67 KiB
 <img src="https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif" height="600">
 
 ## Usage Vue3
+<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/vue3-npm?file=src%2FApp.vue">
+  <img
+    alt="Open in StackBlitz"
+    src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
+  />
+</a>
 
 ```
 npm install @chat-ui/vue3
