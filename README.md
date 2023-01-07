@@ -17,12 +17,11 @@ npm install @chat-ui/vue3
 
 ```
 <script setup>
-      import { Chat } from "@chat-ui/vue3";
-    </script>
-
-    <template>
-      <Chat />
-    </template>
+    import { Chat } from "@chat-ui/vue3";
+</script>
+<template>
+    <Chat />
+</template>
 ```
 
 ## Props
