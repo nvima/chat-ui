@@ -31,6 +31,39 @@ npm install @chat-ui/vue3
 </template>
 ```
 
+## Usage React
+<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/react-npm?file=src%2FApp.js">
+  <img
+    alt="Open in StackBlitz"
+    src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
+  />
+</a>
+
+```
+npm install @chat-ui/react
+```
+
+```
+import { Chat } from '@chat-ui/react'
+
+function App() {
+    function handleSendMessage(text) {
+        console.log(text)
+    }
+
+    return (
+        <div>
+            <Chat
+                chat={[]}
+                onSend={(text) => handleSendMessage(text)}
+            />
+        </div >
+    );
+}
+
+export default App;
+```
+
 ## Props
 
 The options you can pass into the component are listed below.

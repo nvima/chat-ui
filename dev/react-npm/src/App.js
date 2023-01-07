@@ -1,5 +1,6 @@
 import { Chat } from '@chat-ui/react'
-import { useState } from 'react';
+// import { useState } from 'react';
+import React, { useState } from 'react';
 
 function App() {
     const [chatMessages, setChatMessages] = useState(() => [
