@@ -7,7 +7,7 @@ This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
 This Chat is fully customizable.
 Currently supported Frameworks: Vue3
 
-![](https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif)
+![](https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif | height=800)
 
 ## Usage Vue3
 
