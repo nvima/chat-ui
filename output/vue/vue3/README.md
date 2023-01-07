@@ -6,6 +6,8 @@ This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
 
 This Chat is fully customizable.
 
+Size of Package: 16.79 KiB / gzip: 4.67 KiB
+
 
 ## Usage
 
