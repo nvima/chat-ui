@@ -35,8 +35,8 @@ export default function ChatMessages(props) {
           padding: "1.5rem",
         }}
       >
-        {props.chat?.map((chatMessage, _index) => (
-          <div>
+        {props.chat?.map((chatMessage, index) => (
+          <div key={index}>
             {chatMessage.type == "person" ? (
               <>
                 <div className="div">
@@ -101,7 +101,7 @@ export default function ChatMessages(props) {
           </div>
         ))}
       </div>
-      <style jsx>{`
+      <style jsx="true">{`
         .div {
           position: relative;
         }

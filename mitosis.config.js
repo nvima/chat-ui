@@ -1,6 +1,14 @@
+const { CustomReactPlugin } = require('./plugins/react.ts');
+
 module.exports = {
     files: 'src/components/**',
     targets: ['vue3', 'solid', 'svelte', 'react'],
+    options: {
+        react: {
+            // typescript: true,
+            plugins: [CustomReactPlugin],
+        },
+    }
 };
 // module.exports = {
 //   parserOptions: {

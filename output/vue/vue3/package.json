@@ -1,6 +1,6 @@
 {
   "name": "@chat-ui/vue3",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "license": "MIT",
   "private": false,
   "type": "module",

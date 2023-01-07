@@ -57,8 +57,8 @@ export default function ChatHeader(props) {
               width: "8px",
               margin: "auto 4px",
               backgroundColor: props.offline
-                ? props.offlineColor || "red"
-                : props.onlineColor || "green",
+                ? props.colorOffline || "red"
+                : props.colorOnline || "green",
             }}
           />
 
@@ -76,7 +76,7 @@ export default function ChatHeader(props) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
         onClick={(event) => props.closeChat()}
         style={{
           height: "1.75rem",
@@ -88,8 +88,8 @@ export default function ChatHeader(props) {
         }}
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           d="M6 18L18 6M6 6l12 12"
         />
       </svg>

@@ -1,6 +1,6 @@
 <template>
   <form
-    @submit="sendMessage"
+    @submit="sendMessage($event)"
     :style="{
       display: 'flex',
       height: inputHeight || '60px',
@@ -36,8 +36,11 @@
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        class="svg"
         :strokeWidth="1.5"
+        :style="{
+          height: '1.5rem',
+          width: '1.5rkm',
+        }"
       >
         <path
           stroke-linecap="round"
@@ -54,7 +57,7 @@ export default {
   name: "chat-input",
 
   props: [
-    "onSend",
+    "handleSend",
     "inputHeight",
     "bgColorInput",
     "textColorInput",
@@ -66,7 +69,7 @@ export default {
   methods: {
     sendMessage(e) {
       e.preventDefault();
-      if (this.onSend) this.onSend(this.inputField);
+      if (this.handleSend) this.handleSend(this.inputField);
       this.inputField = "";
     },
   },
@@ -78,9 +81,5 @@ export default {
 }
 .input:focus {
   outline: none;
-}
-.svg {
-  height: 1.5rem;
-  width: 1.5rkm;
 }
 </style>

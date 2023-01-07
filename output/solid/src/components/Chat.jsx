@@ -8,18 +8,18 @@ import ChatIcon from "./ChatIcon.jsx";
 function Chat(props) {
   const [chatOpen, setChatOpen] = createSignal(false);
 
-  function closeChat() {
+  function stateCloseChat() {
     setChatOpen(false);
   }
 
-  function openChat() {
+  function stateOpenChat() {
     setChatOpen(true);
   }
 
   return (
     <div>
       <div
-        onClick={(event) => openChat()}
+        onClick={(event) => stateOpenChat()}
         style={{
           position: "fixed",
           bottom: "0px",
@@ -111,15 +111,15 @@ function Chat(props) {
             }}
           >
             <ChatHeader
+              closeChat={stateCloseChat}
               headerHeight={props.headerHeight}
               bgColorHeader={props.bgColorHeader}
               bgColorIcon={props.bgColorIcon}
               textColorHeader={props.textColorHeader}
               fillColorIcon={props.fillColorIcon}
               offline={props.offline}
-              offlineColor={props.offlineColor}
-              onlineColor={(event) => props.onlineColor}
-              closeChat={closeChat}
+              colorOffline={props.colorOffline}
+              colorOnline={props.colorOnline}
             ></ChatHeader>
             <ChatMessages
               bgColorChat={props.bgColorChat}
@@ -132,7 +132,7 @@ function Chat(props) {
               chat={props.chat}
             ></ChatMessages>
             <ChatInput
-              onSend={(event) => props.onSend}
+              handleSend={props.onSend}
               inputHeight={props.inputHeight}
               bgColorInput={props.bgColorInput}
               textColorInput={props.textColorInput}

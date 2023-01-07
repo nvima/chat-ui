@@ -14,8 +14,8 @@
   export let bgColorHeader;
   export let textColorHeader;
   export let offline;
-  export let offlineColor;
-  export let onlineColor;
+  export let colorOffline;
+  export let colorOnline;
   export let bgColorChat;
   export let bgColorMessageChatbot;
   export let bgColorMessagePerson;
@@ -40,10 +40,10 @@
     });
   }
 
-  function closeChat() {
+  function stateCloseChat() {
     chatOpen = false;
   }
-  function openChat() {
+  function stateOpenChat() {
     chatOpen = true;
   }
 
@@ -63,7 +63,7 @@
       transitionDelay: chatOpen ? "0ms" : "300ms",
     }}
     on:click={(event) => {
-      openChat();
+      stateOpenChat();
     }}
   >
     <div
@@ -134,15 +134,15 @@
         }}
       >
         <ChatHeader
+          closeChat={stateCloseChat}
           {headerHeight}
           {bgColorHeader}
           {bgColorIcon}
           {textColorHeader}
           {fillColorIcon}
           {offline}
-          {offlineColor}
-          on:linecolor={onlineColor}
-          {closeChat}
+          {colorOffline}
+          {colorOnline}
         />
         <ChatMessages
           {bgColorChat}
@@ -155,7 +155,7 @@
           {chat}
         />
         <ChatInput
-          on:send={onSend}
+          handleSend={onSend}
           {inputHeight}
           {bgColorInput}
           {textColorInput}

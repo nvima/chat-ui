@@ -7,13 +7,13 @@ function ChatInput(props) {
 
   function sendMessage(e) {
     e.preventDefault();
-    if (props.onSend) props.onSend(inputField());
+    if (props.handleSend) props.handleSend(inputField());
     setInputField("");
   }
 
   return (
     <form
-      onSubmit={(event) => sendMessage}
+      onSubmit={(event) => sendMessage(event)}
       style={{
         display: "flex",
         height: props.inputHeight || "60px",
@@ -49,15 +49,15 @@ function ChatInput(props) {
         }}
       >
         <svg
-          class={css({
-            height: "1.5rem",
-            width: "1.5rkm",
-          })}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
           strokeWidth={1.5}
+          style={{
+            height: "1.5rem",
+            width: "1.5rkm",
+          }}
         >
           <path
             stroke-linecap="round"

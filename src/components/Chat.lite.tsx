@@ -8,10 +8,10 @@ import { useStore } from '@builder.io/mitosis'
 export default function Chat(props: ChatProps) {
     const state = useStore({
         chatOpen: false,
-        closeChat() {
+        stateCloseChat() {
             state.chatOpen = false
         },
-        openChat() {
+        stateOpenChat() {
             state.chatOpen = true
         },
     });
@@ -19,7 +19,7 @@ export default function Chat(props: ChatProps) {
     return (
     <div>
         <div 
-            onClick={() => state.openChat()}
+            onClick={() => state.stateOpenChat()}
             style={{
                 position: 'fixed', bottom: '0px', right: '0px',
                 overflow: 'hidden',
@@ -69,15 +69,15 @@ export default function Chat(props: ChatProps) {
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
                     <ChatHeader
+                        closeChat={state.stateCloseChat}
                         headerHeight={props.headerHeight}
                         bgColorHeader={props.bgColorHeader}
                         bgColorIcon={props.bgColorIcon}
                         textColorHeader={props.textColorHeader}
                         fillColorIcon={props.fillColorIcon}
                         offline={props.offline}
-                        offlineColor={props.offlineColor}
-                        onlineColor={props.onlineColor}
-                        closeChat={state.closeChat}
+                        colorOffline={props.colorOffline}
+                        colorOnline={props.colorOnline}
                     />
                     <ChatMessages
                         bgColorChat={props.bgColorChat}
@@ -90,7 +90,7 @@ export default function Chat(props: ChatProps) {
                         chat={props.chat}
                     />
                     <ChatInput
-                        onSend={props.onSend}
+                        handleSend={props.onSend}
                         inputHeight={props.inputHeight}
                         bgColorInput={props.bgColorInput}
                         textColorInput={props.textColorInput}

@@ -1,5 +1,5 @@
 <script>
-  export let onSend;
+  export let handleSend;
   export let inputHeight;
   export let bgColorInput;
   export let textColorInput;
@@ -17,7 +17,7 @@
 
   function sendMessage(e) {
     e.preventDefault();
-    if (onSend) onSend(inputField);
+    if (handleSend) handleSend(inputField);
     inputField = "";
   }
 
@@ -32,7 +32,7 @@
     color: textColorInput || "black",
   }}
   on:submit={(event) => {
-    sendMessage;
+    sendMessage(event);
   }}
 >
   <input
@@ -61,11 +61,14 @@
     }}
   >
     <svg
+      use:mitosis_styling={{
+        height: "1.5rem",
+        width: "1.5rkm",
+      }}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
-      class="svg"
       strokeWidth={1.5}
     >
       <path
@@ -82,9 +85,5 @@
   }
   .input:focus {
     outline: none;
-  }
-  .svg {
-    height: 1.5rem;
-    width: 1.5rkm;
   }
 </style>

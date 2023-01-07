@@ -2,8 +2,8 @@
 
 This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
 
-# @chat-ui/vue3
-<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/vue3-npm?file=src%2FApp.vue">
+# @chat-ui/react
+<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/react-npm?file=src%2FApp.js">
   <img
     alt="Open in StackBlitz"
     src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
@@ -12,7 +12,7 @@ This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
 
 This Chat is fully customizable.
 
-Size of Package: 16.79 KiB / gzip: 4.67 KiB
+Size of Package: 24.53 KiB / gzip: 8.55 KiB
 
 <img src="https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif" height="600">
 
@@ -20,15 +20,24 @@ Size of Package: 16.79 KiB / gzip: 4.67 KiB
 
 
 ```
-<script setup>
-    import { Chat } from "@chat-ui/vue3";
-    function handleMessage(message){
-        console.log(message)
+import { Chat } from '@chat-ui/react'
+
+function App() {
+    function handleSendMessage(text) {
+        console.log(text)
     }
-</script>
-<template>
-    <Chat :chat="[]" :onSend="handleMessage" />
-</template>
+
+    return (
+        <div>
+            <Chat
+                chat={[]}
+                onSend={(text) => handleSendMessage(text)}
+            />
+        </div >
+    );
+}
+
+export default App;
 ```
 
 ## Props

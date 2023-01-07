@@ -37,8 +37,8 @@ export default function ChatHeader(props: ChatHeaderProps) {
                         width: '8px',
                         margin: 'auto 4px',
                         backgroundColor: props.offline ?
-                            props.offlineColor || 'red' :
-                            props.onlineColor || 'green'
+                            props.colorOffline || 'red' :
+                            props.colorOnline || 'green'
                     }}></div>
                     <Show
                         when={props.offline}

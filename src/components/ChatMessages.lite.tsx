@@ -36,8 +36,8 @@ export default function ChatMessages(props: ChatMessagesProps) {
                 padding: '1.5rem',
             }}
         >
-            <For each={props.chat}>{(chatMessage: any, _index) =>
-                <div>
+            <For each={props.chat}>{(chatMessage: any, index) =>
+                <div key={index}>
                     <Show when={chatMessage.type == 'person'}>
                         <div css={{
                             position: 'relative',

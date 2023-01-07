@@ -83,9 +83,9 @@ Ex.
 
 - **offline**: `boolean`. Changes the Online to Offline.
 
-- **onlineColor**: `string`. Define the  dot color of Online Status 
+- **colorOnline**: `string`. Define the  dot color of Online Status 
 
-- **offlineColor**: `string`. Define the dot color of Online Status 
+- **colorOffline**: `string`. Define the dot color of Offline Status 
 
 - **headerHeight**: `string`. Define Header Heigth of the Chat
 

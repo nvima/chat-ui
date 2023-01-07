@@ -18,8 +18,8 @@ export type ChatProps = {
     height: string;
     width: string;
     offline: boolean;
-    onlineColor: string;
-    offlineColor: string;
+    colorOffline: string;
+    colorOnline: string;
     headerHeight: string;
     inputHeight: string;
     inputPlaceholder: string;
@@ -27,7 +27,7 @@ export type ChatProps = {
 };
 
 export type ChatInputProps = {
-    onSend: (event: any) => void;
+    handleSend: (event: any) => void;
     inputHeight: string;
     bgColorInput: string;
     textColorInput: string;
@@ -46,10 +46,10 @@ export type ChatMessagesProps = {
 };
 
 export type ChatHeaderProps = {
-    closeChat: (event: any) => void;
+    closeChat: () => void;
     offline: boolean;
-    onlineColor: string;
-    offlineColor: string;
+    colorOnline: string;
+    colorOffline: string;
     fillColorIcon: string;
     textColorHeader: string;
     bgColorHeader: string;

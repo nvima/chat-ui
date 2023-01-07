@@ -53,7 +53,7 @@
   }}
   id="chat-container"
 >
-  {#each chat as chatMessage, _index}
+  {#each chat as chatMessage, index (index)}
     <div>
       {#if chatMessage.type == "person"}
         <div class="div">

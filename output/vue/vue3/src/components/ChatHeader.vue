@@ -51,8 +51,8 @@
             width: '8px',
             margin: 'auto 4px',
             backgroundColor: offline
-              ? offlineColor || 'red'
-              : onlineColor || 'green',
+              ? colorOffline || 'red'
+              : colorOnline || 'green',
           }"
         ></div>
 
@@ -103,8 +103,8 @@ export default {
     "fillColorIcon",
     "textColorHeader",
     "offline",
-    "offlineColor",
-    "onlineColor",
+    "colorOffline",
+    "colorOnline",
     "closeChat",
   ],
 };

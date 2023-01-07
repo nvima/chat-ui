@@ -56,8 +56,8 @@ function ChatHeader(props) {
               width: "8px",
               margin: "auto 4px",
               "background-color": props.offline
-                ? props.offlineColor || "red"
-                : props.onlineColor || "green",
+                ? props.colorOffline || "red"
+                : props.colorOnline || "green",
             }}
           ></div>
           <Show fallback={<div>Online</div>} when={props.offline}>

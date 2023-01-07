@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      @click="openChat()"
+      @click="stateOpenChat()"
       :style="{
         position: 'fixed',
         bottom: '0px',
@@ -81,15 +81,15 @@
           }"
         >
           <chat-header
+            :closeChat="stateCloseChat"
             :headerHeight="headerHeight"
             :bgColorHeader="bgColorHeader"
             :bgColorIcon="bgColorIcon"
             :textColorHeader="textColorHeader"
             :fillColorIcon="fillColorIcon"
             :offline="offline"
-            :offlineColor="offlineColor"
-            @linecolor="onlineColor"
-            :closeChat="closeChat"
+            :colorOffline="colorOffline"
+            :colorOnline="colorOnline"
           ></chat-header>
           <chat-messages
             :bgColorChat="bgColorChat"
@@ -102,7 +102,7 @@
             :chat="chat"
           ></chat-messages>
           <chat-input
-            @send="onSend"
+            :handleSend="onSend"
             :inputHeight="inputHeight"
             :bgColorInput="bgColorInput"
             :textColorInput="textColorInput"
@@ -139,8 +139,8 @@ export default {
     "bgColorHeader",
     "textColorHeader",
     "offline",
-    "offlineColor",
-    "onlineColor",
+    "colorOffline",
+    "colorOnline",
     "bgColorChat",
     "bgColorMessageChatbot",
     "bgColorMessagePerson",
@@ -159,10 +159,10 @@ export default {
   data: () => ({ chatOpen: false }),
 
   methods: {
-    closeChat() {
+    stateCloseChat() {
       this.chatOpen = false;
     },
-    openChat() {
+    stateOpenChat() {
       this.chatOpen = true;
     },
   },

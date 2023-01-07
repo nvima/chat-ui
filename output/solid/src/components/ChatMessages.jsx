@@ -31,9 +31,9 @@ function ChatMessages(props) {
     >
       <For each={props.chat}>
         {(chatMessage, _index) => {
-          const _index = _index();
+          const index = _index();
           return (
-            <div>
+            <div key={index}>
               <Show when={chatMessage.type == "person"}>
                 <div
                   class={css({

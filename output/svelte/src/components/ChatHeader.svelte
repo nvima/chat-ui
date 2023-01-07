@@ -7,8 +7,8 @@
   export let fillColorIcon;
   export let textColorHeader;
   export let offline;
-  export let offlineColor;
-  export let onlineColor;
+  export let colorOffline;
+  export let colorOnline;
   export let closeChat;
 
   function mitosis_styling(node, vars) {
@@ -74,8 +74,8 @@
           width: "8px",
           margin: "auto 4px",
           backgroundColor: offline
-            ? offlineColor || "red"
-            : onlineColor || "green",
+            ? colorOffline || "red"
+            : colorOnline || "green",
         }}
       />
 
