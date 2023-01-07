@@ -12,12 +12,11 @@ This Chat is fully customizable.
 
 ```
 <script setup>
-      import { Chat } from "@chat-ui/vue3";
-    </script>
-
-    <template>
-      <Chat />
-    </template>
+    import { Chat } from "@chat-ui/vue3";
+</script>
+<template>
+    <Chat />
+</template>
 ```
 
 ## Props
