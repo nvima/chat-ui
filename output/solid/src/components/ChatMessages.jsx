@@ -14,6 +14,7 @@ function ChatMessages(props) {
   function onUpdateFn_1() {
     const container = document.getElementById("chat-container");
     if (container) setChatElementAdded(true);
+if (container) scrollToEnd(container);
   }
   createEffect(on(() => [props.chat.length], onUpdateFn_1));
 

@@ -1,12 +1,18 @@
 const { CustomReactPlugin } = require('./plugins/react.ts');
+const { CustomSolidPlugin } = require('./plugins/solid.ts');
 
 module.exports = {
+    prettier: false,
     files: 'src/components/**',
-    targets: ['vue3', 'solid', 'svelte', 'react'],
+    targets: ['vue3', 'react', 'solid'],
     options: {
         react: {
             // typescript: true,
             plugins: [CustomReactPlugin],
+        },
+        solid: {
+            // typescript: true,
+            plugins: [CustomSolidPlugin],
         },
     }
 };

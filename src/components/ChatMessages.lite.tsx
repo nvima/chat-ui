@@ -1,5 +1,15 @@
-import { ChatMessagesProps } from './types'
 import { useStore, Show, For, onUpdate } from '@builder.io/mitosis';
+
+export interface ChatMessagesProps  {
+    chat?: [];
+    bgColorChat?: string;
+    bgColorMessageChatbot?: string;
+    bgColorMessagePerson?: string;
+    bgColorMessageTimestamp?: string;
+    textColorMessageChatbot?: string;
+    textColorMessagePerson?: string;
+    textColorMessageTimestamp?: string;
+}
 
 export default function ChatMessages(props: ChatMessagesProps) {
     const state = useStore({

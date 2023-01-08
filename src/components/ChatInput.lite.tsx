@@ -1,5 +1,12 @@
 import { useStore } from '@builder.io/mitosis';
-import { ChatInputProps } from './types'
+
+export interface ChatInputProps {
+    handleSend?: (event: any) => void;
+    inputHeight?: string;
+    bgColorInput?: string;
+    textColorInput?: string;
+    inputPlaceholder?: string;
+}
 
 export default function ChatInput(props: ChatInputProps) {
     const state = useStore({

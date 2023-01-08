@@ -1,6 +1,17 @@
-import { ChatHeaderProps } from './types'
 import { Show } from '@builder.io/mitosis';
 import ChatIcon from './ChatIcon.lite';
+
+export interface ChatHeaderProps  {
+    closeChat?: () => void;
+    offline?: boolean;
+    colorOnline?: string;
+    colorOffline?: string;
+    fillColorIcon?: string;
+    textColorHeader?: string;
+    bgColorHeader?: string;
+    bgColorIcon?: string;
+    headerHeight?: string;
+}
 
 export default function ChatHeader(props: ChatHeaderProps) {
     return (

@@ -1,70 +1,8 @@
-# chat-ui
+# Warning: Generated Code
 
-This Chat is fully customizable.
-Currently supported Frameworks: Vue3
+This library is generated using [Mitosis](https://github.com/BuilderIO/mitosis)
 
-Size of Package: 16.79 KiB / gzip: 4.67 KiB
-
-<img src="https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif" height="600">
-
-## Usage Vue3
-<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/vue3-npm?file=src%2FApp.vue">
-  <img
-    alt="Open in StackBlitz"
-    src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
-  />
-</a>
-
-```
-npm install @chat-ui/vue3
-```
-
-```
-<script setup>
-    import { Chat } from "@chat-ui/vue3";
-    function handleMessage(message){
-        console.log(message)
-    }
-</script>
-<template>
-    <Chat :chat="[]" :onSend="handleMessage" />
-</template>
-```
-
-## Usage React
-<a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/react-npm?file=src%2FApp.js">
-  <img
-    alt="Open in StackBlitz"
-    src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
-  />
-</a>
-
-```
-npm install @chat-ui/react
-```
-
-```
-import { Chat } from '@chat-ui/react'
-
-function App() {
-    function handleSendMessage(text) {
-        console.log(text)
-    }
-
-    return (
-        <div>
-            <Chat
-                chat={[]}
-                onSend={(text) => handleSendMessage(text)}
-            />
-        </div >
-    );
-}
-
-export default App;
-```
-
-## Usage Solid
+# @chat-ui/solid
 <a href="https://stackblitz.com/github/nvima/chat-ui/tree/main/dev/solid-npm?file=src%2FApp.jsx">
   <img
     alt="Open in StackBlitz"
@@ -72,9 +10,12 @@ export default App;
   />
 </a>
 
-```
-npm install @chat-ui/solid
-```
+This Chat is fully customizable.
+
+<img src="https://raw.githubusercontent.com/nvima/chat-ui/main/docs/images/chatbotpreview.gif" height="600">
+
+## Usage
+
 
 ```
 import { Chat } from '@chat-ui/solid'
@@ -91,6 +32,7 @@ function App() {
 }
 
 export default App;
+
 ```
 
 ## Props
@@ -178,3 +120,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
